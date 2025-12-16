@@ -1,5 +1,5 @@
 package com.example.demo.entity;
-import 
+import jakarta.persistence.*;
 
 public class Student{
     private Long id;
