@@ -27,5 +27,8 @@ public class Student{
     public float getCgpa(){
         return cgpa;
     }
-    public void
+    public void setCgpa(){
+        this.cgpa=cgpa;
+    }
+    
 }
