@@ -1,4 +1,5 @@
 package com.example.demo.entity;
+import 
 
 public class Student{
     private Long id;
@@ -30,5 +31,13 @@ public class Student{
     public void setCgpa(){
         this.cgpa=cgpa;
     }
-    
+    public Student(Long id,String name,String email,float cgpa){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+        this.cgpa=cgpa;
+    }
+    public Student(){
+
+    }
 }
