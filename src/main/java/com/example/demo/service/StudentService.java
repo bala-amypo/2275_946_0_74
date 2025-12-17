@@ -7,19 +7,15 @@ import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepository;
 
 @Service
-public class StudentService {
+public interface StudentService {
 
     @Autowired
     StudentRepository repo;
 
     //create (or) Insert data
-    public Student createData(Student stu){
-        return repo.save(stu);
-    }
+     Student createData(Student stu);
 
     //Fetch all records
-    public List<Student>fetchRecord(){
-        return repo.findAll();
-    }
+    public List<Student>fetchRecord();
 
 }
