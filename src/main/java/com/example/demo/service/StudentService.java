@@ -10,7 +10,7 @@ import com.example.demo.entity.Student;
 public interface StudentService {
 
     // @Autowired
-    // StudentRepository repo;
+    StudentRepository repo;
 
     //create (or) Insert data
      Student createData(Student stu);
