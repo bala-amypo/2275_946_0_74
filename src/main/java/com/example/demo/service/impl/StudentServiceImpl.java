@@ -1,25 +1,58 @@
-import java.util.List;  
-import org. springframework. beans. factory. annotation. Autowired;  
-import com.example.demo.entity.Student; 
-import com. example. demo.repository. StudentRepository; 
-import com.example.demo.service.StudentService;  
-import org.springframework.stereotype.Service;  
+// import java.util.List;  
+// import org. springframework. beans. factory. annotation. Autowired;  
+// import com.example.demo.entity.Student; 
+// import com. example. demo.repository. StudentRepository; 
+// import com.example.demo.service.StudentService;  
+// import org.springframework.stereotype.Service;  
 
-@Service
- public class StudentServiceImpl implements StudentService {  
+// @Service
+//  public class StudentServiceImpl implements StudentService {  
 
-    @Autowired 
-    StudentRepository repo; 
+//     @Autowired 
+//     StudentRepository repo; 
 
-    @Override 
-    //create (or) Insert data 
-    public Student createData(Student stu) { 
-        return repo.save(stu);
-    }  
+//     @Override 
+//     //create (or) Insert data 
+//     public Student createData(Student stu) { 
+//         return repo.save(stu);
+//     }  
     
-    @Override 
-    // Fetch all records 
-    public List<Student> fetchRecord() { 
+//     @Override 
+//     // Fetch all records 
+//     public List<Student> fetchRecord() { 
+//         return repo.findAll();
+//     } 
+// } 
+
+
+
+
+
+
+
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.Student;
+import com.example.demo.repository.StudentRepository;
+
+@Service 
+public class StudentServiceImpl implements StudentService {
+
+    @Autowired
+    private StudentRepository repo;
+
+    @Override
+    public Student createData(Student stu) {
+        return repo.save(stu);
+    }
+
+    @Override
+    public List<Student> fetchRecord() {
         return repo.findAll();
-    } 
-} 
+    }
+}
